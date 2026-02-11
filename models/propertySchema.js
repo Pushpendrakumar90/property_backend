@@ -11,27 +11,28 @@ const propertySchema = new mongoose.Schema({
     state: { type: String },
     pincode: { type: Number },
 
-    areaSqft: { type: String },
-    bedrooms: { type: String },
-    bathrooms: { type: String },
-    floorNumber: { type: String },
-    totalFloors: { type: String },
+    areaSqft: { type: Number },
+    bedrooms: { type: Number },
+    bathrooms: { type: Number },
+    floorNumber: { type: Number },
+    totalFloors: { type: Number },
 
-    price: { type: String },
-    pricePerSqft: { type: String },
+    price: { type: Number },
+    pricePerSqft: { type: Number },
 
     images: { type: String },
     videoUrl: { type: String },
     floorPlan: { type: String },
 
     contactName: { type: String },
-    contactPhone: { type: String },
+    contactPhone: { type: Number },
     contactEmail: { type: String }
 },
 
 { timestamps: true }
 
 );
+
 
 
 module.exports = mongoose.model('property', propertySchema)
